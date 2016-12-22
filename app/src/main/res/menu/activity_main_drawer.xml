@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/theme_zone"
+            android:icon="@drawable/sidebar_buttons_home"
+            android:title="@string/theme_zone" />
+        <item
+            android:id="@+id/map_gps"
+            android:icon="@drawable/sidebar_buttons_gps"
+            android:title="@string/map_gps" />
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/sidebar_buttons_search"
+            android:title="@string/search" />
+        <item
+            android:id="@+id/barchart"
+            android:icon="@drawable/sidebar_buttons_barchart"
+            android:title="@string/barchart" />
+        <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/sidebar_buttons_heart"
+            android:title="@string/favorite" />
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/sidebar_buttons_phone"
+            android:title="@string/contact_us" />
+        <item
+            android:id="@+id/language_setting"
+            android:icon="@drawable/sidebar_buttons_setting"
+            android:title="@string/language_setting" />
+        <item
+            android:id="@+id/q_a"
+            android:icon="@drawable/sidebar_buttons_bulb"
+            android:title="@string/q_a" />
+        <item
+            android:id="@+id/member_zone"
+            android:icon="@drawable/sidebar_buttons_member"
+            android:title="@string/member_zone" />
+    </group>
+
+</menu>

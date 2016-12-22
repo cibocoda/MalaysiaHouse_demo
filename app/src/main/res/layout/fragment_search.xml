@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fiveteam.malaysiahouse2.SearchFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:src="@drawable/sidebar_buttons_search"
+                        android:tint="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/search"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/IV_larrow"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:tint="@color/orange"
+                    android:scaleType="fitXY"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/SV_p3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/TV_start_search">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/IV_search_icon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignTop="@+id/TV_search_area"
+                    android:layout_alignBottom="@+id/TV_search_area"
+                    android:src="@drawable/search_title_icon"
+                    android:tint="@color/white"
+                    android:background="@color/orange"/>
+
+                <TextView
+                    android:id="@+id/TV_search_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/IV_search_icon1"
+                    android:layout_toEndOf="@+id/IV_search_icon1"
+                    android:text="依地區"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@color/orange"/>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/LV_search_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/IV_search_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignTop="@+id/TV_search_gps"
+                    android:layout_alignBottom="@+id/TV_search_gps"
+                    android:src="@drawable/search_title_icon"
+                    android:tint="@color/white"
+                    android:background="@color/orange"/>
+
+                <TextView
+                    android:id="@+id/TV_search_gps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/IV_search_icon2"
+                    android:layout_toEndOf="@+id/IV_search_icon2"
+                    android:text="依定位"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@color/orange"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_map"
+                android:scaleType="fitStart"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/IV_search_icon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignTop="@+id/TV_search_traffic"
+                    android:layout_alignBottom="@+id/TV_search_traffic"
+                    android:src="@drawable/search_title_icon"
+                    android:tint="@color/white"
+                    android:background="@color/orange"/>
+
+                <TextView
+                    android:id="@+id/TV_search_traffic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/IV_search_icon3"
+                    android:layout_toEndOf="@+id/IV_search_icon3"
+                    android:text="依定位"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@color/orange"/>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/LV_search_traffic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/IV_search_icon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_alignTop="@+id/TV_search_options"
+                    android:layout_alignBottom="@+id/TV_search_options"
+                    android:src="@drawable/search_title_icon"
+                    android:tint="@color/white"
+                    android:background="@color/orange"/>
+
+                <TextView
+                    android:id="@+id/TV_search_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_toRightOf="@+id/IV_search_icon4"
+                    android:layout_toEndOf="@+id/IV_search_icon4"
+                    android:text="依定位"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@color/orange"/>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/LV_search_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/TV_start_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="開始搜尋"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/yellow"
+        android:layout_above="@+id/block"/>
+
+    <View
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

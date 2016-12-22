@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LL_member_form"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/IV_member_face"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:padding="@dimen/nav_header_vertical_spacing" />
+
+    <TextView
+        android:id="@+id/TV_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/IV_member_face"
+        android:layout_toEndOf="@+id/IV_member_face"
+        android:layout_alignTop="@+id/IV_member_face"
+        android:layout_alignBottom="@+id/IV_member_face"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#696969"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/TV_member_name"/>
+
+    <LinearLayout
+        android:id="@+id/LL_member_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/block">
+
+        <TextView
+            android:id="@+id/TV_member_fix"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="編輯資料"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@color/orange"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/TV_logout_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="@string/logout"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@color/yellow"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_member_fix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL_member_buttons"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/block2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#696969"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <include
+            layout="@layout/member_fixinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

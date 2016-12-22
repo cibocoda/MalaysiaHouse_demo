@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/yellow</color><!-- #3F51B5 -->
+    <color name="colorPrimaryDark">@color/yellow</color><!-- #303F9F -->
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="yellow">#F9BE2D</color>
+    <color name="yomiddle">#E17D2C</color>
+    <color name="orange">#EA5413</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0022FF</color>
+</resources>
